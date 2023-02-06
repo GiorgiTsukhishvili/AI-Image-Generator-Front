@@ -1,5 +1,5 @@
 import { ErrorMessage } from "@hookform/error-message";
-import { useLandingForm } from "components";
+import { NormalInput, useLandingForm } from "components";
 
 const LandingForm = () => {
   const { register, handleSubmit, onSubmit, errors } = useLandingForm();
@@ -9,40 +9,25 @@ const LandingForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col w-full items-start my-10 "
     >
-      <label htmlFor="login" className="text-neutral-900 text-2xl">
-        Username or Email
-      </label>
-      <input
-        type="text"
-        {...register("login", {
-          required: {
-            value: true,
-            message: "Login field is required",
-          },
-        })}
-        className="w-full rounded-md border-black text-neutral-900 placeholder:text-neutral-500 border focus:outline-none focus:ring-0 bg-transparent px-2 py-4 text-xl mt-3"
-        placeholder="Input email or username"
+      <NormalInput
+        type={"text"}
+        placeholder={"Input email or username"}
+        register={register}
+        errors={errors}
+        name={"login"}
+        message={"Login field is required"}
+        labelText={" Username or Email"}
       />
-      <div className="text-red-600 h-10 text-xl font-medium my-2">
-        <ErrorMessage errors={errors} name="login" />
-      </div>
-      <label htmlFor="password" className="text-neutral-900 text-2xl">
-        Password
-      </label>
-      <input
-        type="password"
-        {...register("password", {
-          required: {
-            value: true,
-            message: "Password field is required",
-          },
-        })}
-        className="w-full rounded-md border-black  text-neutral-900 placeholder:text-neutral-500 border focus:outline-none focus:ring-0 bg-transparent px-2 py-4 text-xl mt-3"
-        placeholder="Input password"
+
+      <NormalInput
+        type={"password"}
+        placeholder={"Input password"}
+        register={register}
+        errors={errors}
+        name={"password"}
+        message={"Password field is required"}
+        labelText={"Password"}
       />
-      <div className="text-red-600 h-10 text-xl font-medium my-2">
-        <ErrorMessage errors={errors} name="password" />
-      </div>
 
       <div className="flex gap-2 items-center mb-5">
         <input
@@ -58,7 +43,7 @@ const LandingForm = () => {
         </label>
       </div>
 
-      <button className="bg-green-600 text-white text-3xl w-full py-6 text-center">
+      <button className="bg-green-600 hover:bg-green-900 transition-all text-white text-3xl w-full py-6 text-center">
         Login
       </button>
     </form>
