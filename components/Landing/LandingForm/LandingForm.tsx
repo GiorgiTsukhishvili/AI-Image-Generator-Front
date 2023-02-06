@@ -1,7 +1,7 @@
-import { ErrorMessage } from "@hookform/error-message";
 import { NormalInput, useLandingForm } from "components";
+import { LandingFormProps } from "./types";
 
-const LandingForm = () => {
+const LandingForm: React.FC<LandingFormProps> = ({ setWhichForm }) => {
   const { register, handleSubmit, onSubmit, errors } = useLandingForm();
 
   return (
@@ -34,17 +34,24 @@ const LandingForm = () => {
           type="checkbox"
           {...register("remember")}
           className="rounded-[0.25rem] w-6 h-6 cursor-pointer"
+          id="remember"
         />
         <label
           htmlFor="remember"
-          className=" font-normal text-neutral-900 text-2xl"
+          className=" font-normal text-neutral-900 text-2xl cursor-pointer"
         >
           Remember me
         </label>
       </div>
 
-      <button className="bg-green-600 hover:bg-green-900 transition-all text-white text-3xl w-full py-6 text-center">
+      <button className="bg-green-600 hover:bg-green-900 transition-all text-white text-2xl w-full py-5 text-center">
         Login
+      </button>
+      <button
+        className="bg-gray-600 hover:bg-gray-900 transition-all text-white text-2xl w-full py-5 text-center mt-5"
+        onClick={() => setWhichForm("register")}
+      >
+        Register
       </button>
     </form>
   );

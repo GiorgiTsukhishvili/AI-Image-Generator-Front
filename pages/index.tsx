@@ -1,8 +1,11 @@
 import { LandingForm } from "components";
+import { useLandingPage } from "hooks";
 import type { NextPage } from "next";
 import Image from "next/image";
 
 const Home: NextPage = () => {
+  const { whichForm, setWhichForm } = useLandingPage();
+
   return (
     <div className="flex justify-between pt-10 px-20 pb-20 bg-gray-200 flex-col-reverse sm:flex-row">
       <div className="flex flex-wrap gap-10 h-[calc(100vh_-_120px)] w-auto overflow-auto scroll_remove ">
@@ -71,7 +74,11 @@ const Home: NextPage = () => {
         <h1 className="text-2xl lg:text-3xl text-neutral-900 font-medium text-center mt-32">
           Welcome Back
         </h1>
-        <LandingForm />
+        {whichForm === "login" ? (
+          <LandingForm setWhichForm={setWhichForm} />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
