@@ -1,4 +1,4 @@
-import { LoginForm } from "components";
+import { LoginForm, RegisterForm } from "components";
 import { useLandingPage } from "hooks";
 import type { NextPage } from "next";
 import Image from "next/image";
@@ -71,11 +71,10 @@ const Home: NextPage = () => {
           AI With Your Vision
         </h1>
 
-        <h1 className="text-2xl lg:text-3xl text-neutral-900 font-medium text-center mt-32">
-          Welcome Back
-        </h1>
         {whichForm === "login" ? (
           <LoginForm setWhichForm={setWhichForm} />
+        ) : whichForm === "register" ? (
+          <RegisterForm setWhichForm={setWhichForm} />
         ) : (
           <></>
         )}
