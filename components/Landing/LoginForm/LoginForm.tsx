@@ -53,12 +53,12 @@ const LoginForm: React.FC<LoginFormProps> = ({ setWhichForm }) => {
         <button className="bg-green-600 hover:bg-green-900 transition-all text-white text-2xl w-full py-5 text-center">
           Login
         </button>
-        <button
+        <h1
           className="bg-gray-600 hover:bg-gray-900 transition-all text-white text-2xl w-full py-5 text-center mt-5"
           onClick={() => setWhichForm("register")}
         >
           Register
-        </button>
+        </h1>
       </form>
     </Fragment>
   );

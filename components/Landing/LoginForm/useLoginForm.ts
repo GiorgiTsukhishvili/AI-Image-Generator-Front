@@ -1,3 +1,4 @@
+import { LoginFormTypes } from "./types";
 import { useForm } from "react-hook-form";
 
 const useLoginForm = () => {
@@ -5,9 +6,9 @@ const useLoginForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ mode: "onChange" });
+  } = useForm<LoginFormTypes>({ mode: "onChange" });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: LoginFormTypes) => {
     console.log(data);
   };
 
