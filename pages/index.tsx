@@ -1,4 +1,4 @@
-import { LandingForm } from "components";
+import { LoginForm } from "components";
 import { useLandingPage } from "hooks";
 import type { NextPage } from "next";
 import Image from "next/image";
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           Welcome Back
         </h1>
         {whichForm === "login" ? (
-          <LandingForm setWhichForm={setWhichForm} />
+          <LoginForm setWhichForm={setWhichForm} />
         ) : (
           <></>
         )}

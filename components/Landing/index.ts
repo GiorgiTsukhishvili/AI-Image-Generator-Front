@@ -1,1 +1,1 @@
-export * from "./LandingForm";
+export * from "./LoginForm";
