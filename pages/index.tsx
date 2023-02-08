@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <Head>
         <title>AI Images</title>
       </Head>
-      <div className="flex justify-between pt-10 px-20 pb-20 bg-gray-200 flex-col-reverse sm:flex-row">
+      <div className="flex justify-between pt-10 px-20 pb-20 bg-gray-100 flex-col-reverse sm:flex-row">
         <LandingImages />
         <div className="min-w-[20rem] lg:min-w-[40rem] sm:pl-20 flex items-center flex-col">
           <h1 className="text-3xl  lg:text-4xl text-neutral-900 font-medium text-center">
