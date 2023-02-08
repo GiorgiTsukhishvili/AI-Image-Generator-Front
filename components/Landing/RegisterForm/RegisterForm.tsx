@@ -8,7 +8,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ setWhichForm }) => {
   return (
     <Fragment>
       <h1 className="text-2xl lg:text-3xl text-neutral-900 font-medium text-center mt-32">
-        Registration Form
+        Welcome New User
       </h1>
       <form
         className="flex flex-col w-full items-start my-10 "
