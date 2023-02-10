@@ -7,7 +7,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ setWhichForm }) => {
 
   return (
     <Fragment>
-      <h1 className="text-2xl lg:text-3xl text-neutral-900 font-medium text-center mt-32">
+      <h1 className="text-2xl lg:text-3xl text-white font-medium text-center mt-32">
         Welcome Back
       </h1>
 
@@ -44,7 +44,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ setWhichForm }) => {
           />
           <label
             htmlFor="remember"
-            className=" font-normal text-neutral-900 text-2xl cursor-pointer"
+            className=" font-normal text-white text-2xl cursor-pointer"
           >
             Remember me
           </label>

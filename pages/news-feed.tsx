@@ -1,4 +1,4 @@
-import { UserNavbar } from "components";
+import { SideNavbar, UserNavbar } from "components";
 import Head from "next/head";
 import { Fragment } from "react";
 
@@ -8,8 +8,9 @@ const Home = () => {
       <Head>
         <title>AI Images / Home</title>
       </Head>
-      <div className="bg-gray-100 min-h-screen">
+      <div className="bg-gray-950 min-h-screen">
         <UserNavbar />
+        <SideNavbar />
       </div>
     </Fragment>
   );

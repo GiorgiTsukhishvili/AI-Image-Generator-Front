@@ -13,7 +13,7 @@ const NormalInput: React.FC<NormalInputProps> = ({
 }) => {
   return (
     <Fragment>
-      <label htmlFor={name} className="text-neutral-900 text-2xl">
+      <label htmlFor={name} className="text-white text-2xl">
         {labelText}
       </label>
       <input
@@ -24,7 +24,7 @@ const NormalInput: React.FC<NormalInputProps> = ({
             message,
           },
         })}
-        className="w-full rounded-md border-black  text-neutral-900 placeholder:text-neutral-500 border focus:outline-none focus:ring-0 bg-transparent px-2 py-4 text-xl mt-3"
+        className="w-full rounded-md border-amber-550  text-white placeholder:text-gray-350 border focus:outline-none focus:ring-0 bg-transparent px-2 py-4 text-xl mt-3"
         placeholder={placeholder}
       />
       <div className="text-red-600 h-10 text-xl font-medium my-2">
