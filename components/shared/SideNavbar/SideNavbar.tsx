@@ -4,7 +4,7 @@ import { Avatar, House } from "components";
 
 const SideNavbar: React.FC<SideNavbarProps> = ({ isNewsFeed, isProfile }) => {
   return (
-    <div className="fixed left-0 top-20 px-10 pt-20 flex flex-col gap-5">
+    <div className="fixed left-0 top-20 px-10 pt-20  flex-col gap-5 hidden lg:flex">
       <Link
         href={"/profile"}
         className={`text-2xl ${

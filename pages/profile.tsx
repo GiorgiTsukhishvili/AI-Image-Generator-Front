@@ -9,7 +9,7 @@ const Profile = () => {
         <title>AI Images / profile</title>
       </Head>
       <div className="bg-gray-950 min-h-screen">
-        <UserNavbar />
+        <UserNavbar isProfile={true} />
         <SideNavbar isProfile={true} />
       </div>
     </Fragment>
