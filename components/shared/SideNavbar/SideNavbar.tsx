@@ -1,6 +1,6 @@
 import { SideNavbarProps } from "./types";
 import Link from "next/link";
-import { House } from "components";
+import { Avatar, House } from "components";
 
 const SideNavbar: React.FC<SideNavbarProps> = ({ isNewsFeed, isProfile }) => {
   return (
@@ -9,9 +9,9 @@ const SideNavbar: React.FC<SideNavbarProps> = ({ isNewsFeed, isProfile }) => {
         href={"/profile"}
         className={`text-2xl ${
           isProfile ? "text-red-600" : "text-white "
-        } text-medium`}
+        } text-medium flex items-center gap-3`}
       >
-        My Profile
+        <Avatar isProfile={isProfile} /> My Profile
       </Link>
       <Link
         href={"/news-feed"}
