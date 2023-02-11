@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 
 const UserNavbar: React.FC<UserNavbarProps> = ({ isProfile, isNewsFeed }) => {
-  const { isNavigationOpen, setIsNavigationOpen } = useUserNavbar();
+  const { isNavigationOpen, setIsNavigationOpen, ref } = useUserNavbar();
 
   return (
     <Fragment>
@@ -23,7 +23,10 @@ const UserNavbar: React.FC<UserNavbarProps> = ({ isProfile, isNewsFeed }) => {
         </button>
       </div>
       {isNavigationOpen ? (
-        <div className="h-[calc(100vh_-_80px)] bg-black w-[20rem] lg:hidden top-20 fixed left-0 rounded-md flex flex-col justify-start gap-5 pt-10 pl-10">
+        <div
+          ref={ref}
+          className="h-[calc(100vh_-_80px)] bg-black w-[20rem] lg:hidden top-20 fixed left-0 rounded-md flex flex-col justify-start gap-5 pt-10 pl-10"
+        >
           <Link
             href={"/profile"}
             className={`text-xl ${
