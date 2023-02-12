@@ -1,4 +1,4 @@
-import { useLandingImages } from "components";
+import { LeftArrow, RightArrow, useLandingImages } from "components";
 import Image from "next/image";
 
 const LandingImages = () => {
@@ -14,6 +14,10 @@ const LandingImages = () => {
         className="rounded-md w-full min-w-[25rem] h-[calc(100vh_-_150px)] object-cover"
         priority
       />
+      <div className="flex gap-10 justify-center items-center">
+        <LeftArrow />
+        <RightArrow />
+      </div>
     </div>
   );
 };
