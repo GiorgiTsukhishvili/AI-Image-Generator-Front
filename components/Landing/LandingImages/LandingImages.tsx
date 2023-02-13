@@ -2,7 +2,7 @@ import { LeftArrow, RightArrow, useLandingImages } from "components";
 import Image from "next/image";
 
 const LandingImages = () => {
-  const { landingImage } = useLandingImages();
+  const { landingImage, showNext, showPrev } = useLandingImages();
 
   return (
     <div className="flex flex-wrap justify-center gap-10 h-[calc(100vh_-_120px)]">
@@ -15,8 +15,12 @@ const LandingImages = () => {
         priority
       />
       <div className="flex gap-10 justify-center items-center">
-        <LeftArrow />
-        <RightArrow />
+        <span onClick={showNext} className="cursor-pointer">
+          <LeftArrow />
+        </span>
+        <span onClick={showPrev} className="cursor-pointer">
+          <RightArrow />
+        </span>
       </div>
     </div>
   );
