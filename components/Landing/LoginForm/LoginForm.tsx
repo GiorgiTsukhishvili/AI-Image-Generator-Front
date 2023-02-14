@@ -35,19 +35,27 @@ const LoginForm: React.FC<LoginFormProps> = ({ setWhichForm }) => {
           labelText={"Password"}
         />
 
-        <div className="flex gap-2 items-center mb-5">
-          <input
-            type="checkbox"
-            {...register("remember")}
-            className="rounded-[0.25rem] w-6 h-6 cursor-pointer"
-            id="remember"
-          />
-          <label
-            htmlFor="remember"
-            className=" font-normal text-white text-2xl cursor-pointer"
+        <div className="flex justify-between items-center w-full mb-5">
+          <div className="flex gap-2 items-center">
+            <input
+              type="checkbox"
+              {...register("remember")}
+              className="rounded-[0.25rem] w-6 h-6 cursor-pointer"
+              id="remember"
+            />
+            <label
+              htmlFor="remember"
+              className=" font-normal text-white text-2xl cursor-pointer"
+            >
+              Remember me
+            </label>
+          </div>
+          <h1
+            className=" font-normal text-blue-600 text-2xl cursor-pointer underline"
+            onClick={() => setWhichForm("forgot")}
           >
-            Remember me
-          </label>
+            Forgot Password?
+          </h1>
         </div>
 
         <button className="bg-green-600 hover:bg-green-900 transition-all text-white text-2xl w-full py-5 text-center">

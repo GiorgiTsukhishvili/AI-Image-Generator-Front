@@ -1,1 +1,1 @@
-export type whichForms = "login" | "register";
+export type whichForms = "login" | "register" | "forgot";
