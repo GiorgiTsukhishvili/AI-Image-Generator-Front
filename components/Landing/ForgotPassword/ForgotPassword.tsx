@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { ForgotPasswordProps } from "./types";
 
 const ForgotPassword: React.FC<ForgotPasswordProps> = ({ setWhichForm }) => {
-  const {} = useForgotPassword();
+  const { register, errors, handleSubmit, onSubmit } = useForgotPassword();
 
   return (
     <Fragment>
@@ -11,7 +11,7 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = ({ setWhichForm }) => {
         Forgot Password?
       </h1>
       <form
-        className="flex flex-col w-full items-start my-10 "
+        className="flex flex-col w-full items-start my-10"
         onSubmit={handleSubmit(onSubmit)}
       >
         <NormalInput
@@ -30,6 +30,12 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = ({ setWhichForm }) => {
         >
           Send Email
         </button>
+        <h1
+          className="text-3xl text-white font-medium self-center mt-5 cursor-pointer"
+          onClick={() => setWhichForm("login")}
+        >
+          Go to login
+        </h1>
       </form>
     </Fragment>
   );
