@@ -49,6 +49,15 @@ const UserNavbar: React.FC<UserNavbarProps> = ({
           </Link>
 
           <Link
+            href={"/my-images"}
+            className={`text-xl ${
+              isNewImage ? "text-red-600" : "text-white "
+            } text-medium flex items-center gap-3`}
+          >
+            <Plus isNewImage={isNewImage} isSidebar={true} /> My Images
+          </Link>
+
+          <Link
             href={"/new-image"}
             className={`text-xl ${
               isNewImage ? "text-red-600" : "text-white "
