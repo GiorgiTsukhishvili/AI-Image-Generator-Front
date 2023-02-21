@@ -1,4 +1,11 @@
-import { Avatar, Burger, House, Plus, useUserNavbar } from "components";
+import {
+  Avatar,
+  Burger,
+  Gallery,
+  House,
+  Plus,
+  useUserNavbar,
+} from "components";
 import { UserNavbarProps } from "./types";
 import Link from "next/link";
 import { Fragment } from "react";
@@ -7,6 +14,7 @@ const UserNavbar: React.FC<UserNavbarProps> = ({
   isProfile,
   isNewsFeed,
   isNewImage,
+  isMyImages,
 }) => {
   const { isNavigationOpen, setIsNavigationOpen, ref } = useUserNavbar();
 
@@ -51,10 +59,10 @@ const UserNavbar: React.FC<UserNavbarProps> = ({
           <Link
             href={"/my-images"}
             className={`text-xl ${
-              isNewImage ? "text-red-600" : "text-white "
+              isMyImages ? "text-red-600" : "text-white "
             } text-medium flex items-center gap-3`}
           >
-            <Plus isNewImage={isNewImage} isSidebar={true} /> My Images
+            <Gallery isMyImages={isMyImages} isSidebar={true} /> My Images
           </Link>
 
           <Link
