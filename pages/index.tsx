@@ -3,6 +3,7 @@ import {
   LandingImages,
   LoginForm,
   RegisterForm,
+  Welcome,
 } from "components";
 import { useLandingPage } from "hooks";
 import type { NextPage } from "next";
@@ -30,6 +31,8 @@ const Home: NextPage = () => {
             <RegisterForm setWhichForm={setWhichForm} />
           ) : whichForm === "forgot" ? (
             <ForgotPassword setWhichForm={setWhichForm} />
+          ) : whichForm === "welcome" ? (
+            <Welcome />
           ) : (
             <></>
           )}
