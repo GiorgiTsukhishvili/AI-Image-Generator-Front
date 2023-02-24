@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           ) : whichForm === "forgot" ? (
             <ForgotPassword setWhichForm={setWhichForm} />
           ) : whichForm === "welcome" ? (
-            <Welcome />
+            <Welcome setWhichForm={setWhichForm} />
           ) : (
             <></>
           )}
