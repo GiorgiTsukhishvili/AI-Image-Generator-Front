@@ -3,6 +3,7 @@ import {
   LandingImages,
   LoginForm,
   RegisterForm,
+  SuccessMessage,
   Welcome,
 } from "components";
 import { useLandingPage } from "hooks";
@@ -38,6 +39,7 @@ const Home: NextPage = () => {
           )}
         </div>
       </div>
+      <SuccessMessage />
     </Fragment>
   );
 };
