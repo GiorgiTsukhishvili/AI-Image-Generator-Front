@@ -1,10 +1,19 @@
 import { Close } from "components";
+import { SuccessMessageProps } from "./types";
 
-const SuccessMessage = () => {
+const SuccessMessage: React.FC<SuccessMessageProps> = ({
+  text,
+  setMessage,
+}) => {
   return (
     <div className="absolute top-10 right-20 bg-green-600 w-[300px] h-16 rounded text-2xl text-white flex items-center justify-between px-4">
-      SuccessMessage
-      <span className="cursor-pointer">
+      {text}
+      <span
+        className="cursor-pointer"
+        onClick={() =>
+          setMessage((prevState) => ({ ...prevState, isShowing: false }))
+        }
+      >
         <Close />
       </span>
     </div>

@@ -12,7 +12,8 @@ import Head from "next/head";
 import { Fragment } from "react";
 
 const Home: NextPage = () => {
-  const { whichForm, setWhichForm } = useLandingPage();
+  const { whichForm, setWhichForm, message, setMessage, makeSuccessMessage } =
+    useLandingPage();
 
   return (
     <Fragment>
@@ -39,7 +40,11 @@ const Home: NextPage = () => {
           )}
         </div>
       </div>
-      <SuccessMessage />
+      {message.isShowing ? (
+        <SuccessMessage text={message.text} setMessage={setMessage} />
+      ) : (
+        <></>
+      )}
     </Fragment>
   );
 };
