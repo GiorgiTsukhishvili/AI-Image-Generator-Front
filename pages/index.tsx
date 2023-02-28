@@ -28,11 +28,20 @@ const Home: NextPage = () => {
           </h1>
 
           {whichForm === "login" ? (
-            <LoginForm setWhichForm={setWhichForm} />
+            <LoginForm
+              setWhichForm={setWhichForm}
+              makeMessage={makeSuccessMessage}
+            />
           ) : whichForm === "register" ? (
-            <RegisterForm setWhichForm={setWhichForm} />
+            <RegisterForm
+              setWhichForm={setWhichForm}
+              makeMessage={makeSuccessMessage}
+            />
           ) : whichForm === "forgot" ? (
-            <ForgotPassword setWhichForm={setWhichForm} />
+            <ForgotPassword
+              setWhichForm={setWhichForm}
+              makeMessage={makeSuccessMessage}
+            />
           ) : whichForm === "welcome" ? (
             <Welcome setWhichForm={setWhichForm} />
           ) : (

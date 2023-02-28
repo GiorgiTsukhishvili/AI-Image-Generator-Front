@@ -2,8 +2,12 @@ import { NormalInput, useRegisterForm } from "components";
 import { Fragment } from "react";
 import { RegisterFormProps } from "./types";
 
-const RegisterForm: React.FC<RegisterFormProps> = ({ setWhichForm }) => {
-  const { register, errors, handleSubmit, onSubmit } = useRegisterForm();
+const RegisterForm: React.FC<RegisterFormProps> = ({
+  setWhichForm,
+  makeMessage,
+}) => {
+  const { register, errors, handleSubmit, onSubmit } =
+    useRegisterForm(makeMessage);
 
   return (
     <Fragment>

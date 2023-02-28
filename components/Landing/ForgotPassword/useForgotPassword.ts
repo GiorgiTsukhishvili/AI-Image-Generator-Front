@@ -1,7 +1,7 @@
 import { ForgotPasswordTypes } from "./types";
 import { useForm } from "react-hook-form";
 
-const useForgotPassword = () => {
+const useForgotPassword = (makeMessage: (text: string) => void) => {
   const {
     register,
     formState: { errors },

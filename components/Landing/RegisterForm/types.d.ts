@@ -3,6 +3,7 @@ import { whichForms } from "types";
 
 export type RegisterFormProps = {
   setWhichForm: Dispatch<SetStateAction<whichForms>>;
+  makeMessage: (text: string) => void;
 };
 
 export type RegisterFormTypes = {

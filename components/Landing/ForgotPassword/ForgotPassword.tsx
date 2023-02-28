@@ -2,8 +2,12 @@ import { NormalInput, useForgotPassword } from "components";
 import { Fragment } from "react";
 import { ForgotPasswordProps } from "./types";
 
-const ForgotPassword: React.FC<ForgotPasswordProps> = ({ setWhichForm }) => {
-  const { register, errors, handleSubmit, onSubmit } = useForgotPassword();
+const ForgotPassword: React.FC<ForgotPasswordProps> = ({
+  setWhichForm,
+  makeMessage,
+}) => {
+  const { register, errors, handleSubmit, onSubmit } =
+    useForgotPassword(makeMessage);
 
   return (
     <Fragment>

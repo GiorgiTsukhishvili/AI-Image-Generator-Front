@@ -1,7 +1,7 @@
 import { RegisterFormTypes } from "./types";
 import { useForm } from "react-hook-form";
 
-const useRegisterForm = () => {
+const useRegisterForm = (makeMessage: (text: string) => void) => {
   const {
     register,
     formState: { errors },

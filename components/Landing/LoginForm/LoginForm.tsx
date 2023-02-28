@@ -2,8 +2,9 @@ import { NormalInput, useLoginForm } from "components";
 import { Fragment } from "react";
 import { LoginFormProps } from "./types";
 
-const LoginForm: React.FC<LoginFormProps> = ({ setWhichForm }) => {
-  const { register, handleSubmit, onSubmit, errors } = useLoginForm();
+const LoginForm: React.FC<LoginFormProps> = ({ setWhichForm, makeMessage }) => {
+  const { register, handleSubmit, onSubmit, errors } =
+    useLoginForm(makeMessage);
 
   return (
     <Fragment>

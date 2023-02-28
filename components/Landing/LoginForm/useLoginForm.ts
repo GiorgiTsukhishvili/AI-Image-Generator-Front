@@ -1,7 +1,7 @@
 import { LoginFormTypes } from "./types";
 import { useForm } from "react-hook-form";
 
-const useLoginForm = () => {
+const useLoginForm = (makeMessage: (text: string) => void) => {
   const {
     register,
     handleSubmit,
