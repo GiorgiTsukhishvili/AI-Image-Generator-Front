@@ -28,10 +28,7 @@ const Home: NextPage = () => {
           </h1>
 
           {whichForm === "login" ? (
-            <LoginForm
-              setWhichForm={setWhichForm}
-              makeMessage={makeSuccessMessage}
-            />
+            <LoginForm setWhichForm={setWhichForm} />
           ) : whichForm === "register" ? (
             <RegisterForm
               setWhichForm={setWhichForm}

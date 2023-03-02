@@ -22,7 +22,7 @@ const useRegisterForm = (makeMessage: (text: string) => void) => {
       });
     }
 
-    console.log(data);
+    makeMessage("Registration email sent");
   };
 
   return { register, errors, handleSubmit, onSubmit };

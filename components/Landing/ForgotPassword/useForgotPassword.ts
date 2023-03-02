@@ -9,7 +9,7 @@ const useForgotPassword = (makeMessage: (text: string) => void) => {
   } = useForm<ForgotPasswordTypes>({ mode: "onChange" });
 
   const onSubmit = (data: ForgotPasswordTypes) => {
-    console.log(data);
+    makeMessage("Email has been sent");
   };
 
   return { register, errors, handleSubmit, onSubmit };
