@@ -22,7 +22,7 @@ const Gallery = ({
         cy="76"
         r="14"
         stroke={isMyImages ? "#E31221" : "white"}
-        stroke-width="12"
+        strokeWidth="12"
       />
     </svg>
   );
