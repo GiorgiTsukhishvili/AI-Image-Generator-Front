@@ -2,7 +2,8 @@ import { ErrorMessage } from "@hookform/error-message";
 import { useNewImageLayout } from "components";
 
 const NewImageLayout = () => {
-  const { register, onSubmit, handleSubmit, errors } = useNewImageLayout();
+  const { register, onSubmit, handleSubmit, errors, randomGenerated } =
+    useNewImageLayout();
 
   return (
     <div className="lg:pl-[20rem] pt-40 px-10">
@@ -16,12 +17,20 @@ const NewImageLayout = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col mt-10 max-w-[42rem]"
       >
-        <label
-          htmlFor="new-image"
-          className="text-xl text-white lg:text-2xl font-normal"
-        >
-          New Image
-        </label>
+        <div className="flex justify-start items-center gap-16">
+          <label
+            htmlFor="new-image"
+            className="text-xl text-white lg:text-2xl font-normal"
+          >
+            New Image
+          </label>
+          <h1
+            className="text-xl text-black lg:text-2xl font-normal bg-gray-350 rounded px-2 py-1 cursor-pointer"
+            onClick={randomGenerated}
+          >
+            Random Text
+          </h1>
+        </div>
         <input
           type="text"
           {...register("new-image", {
