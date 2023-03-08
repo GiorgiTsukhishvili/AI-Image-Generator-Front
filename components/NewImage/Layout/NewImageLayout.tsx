@@ -2,8 +2,14 @@ import { ErrorMessage } from "@hookform/error-message";
 import { useNewImageLayout } from "components";
 
 const NewImageLayout = () => {
-  const { register, onSubmit, handleSubmit, errors, randomGenerated } =
-    useNewImageLayout();
+  const {
+    register,
+    onSubmit,
+    handleSubmit,
+    errors,
+    randomGenerated,
+    generateImage,
+  } = useNewImageLayout();
 
   return (
     <div className="lg:pl-[20rem] pt-40 px-10">

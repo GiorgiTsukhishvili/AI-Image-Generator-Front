@@ -18,7 +18,16 @@ const useNewImageLayout = () => {
     setValue("new-image", random);
   };
 
-  return { handleSubmit, register, onSubmit, errors, randomGenerated };
+  const generateImage = () => {};
+
+  return {
+    handleSubmit,
+    register,
+    onSubmit,
+    errors,
+    randomGenerated,
+    generateImage,
+  };
 };
 
 export default useNewImageLayout;
