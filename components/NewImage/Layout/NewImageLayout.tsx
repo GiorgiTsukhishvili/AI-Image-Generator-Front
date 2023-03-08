@@ -2,14 +2,8 @@ import { ErrorMessage } from "@hookform/error-message";
 import { useNewImageLayout } from "components";
 
 const NewImageLayout = () => {
-  const {
-    register,
-    onSubmit,
-    handleSubmit,
-    errors,
-    randomGenerated,
-    generateImage,
-  } = useNewImageLayout();
+  const { register, onSubmit, handleSubmit, errors, randomGenerated } =
+    useNewImageLayout();
 
   return (
     <div className="lg:pl-[20rem] pt-40 px-10">
@@ -25,7 +19,7 @@ const NewImageLayout = () => {
       >
         <div className="flex justify-start items-center gap-16">
           <label
-            htmlFor="new-image"
+            htmlFor="new_image"
             className="text-xl text-white lg:text-2xl font-normal"
           >
             New Image
@@ -39,7 +33,7 @@ const NewImageLayout = () => {
         </div>
         <input
           type="text"
-          {...register("new-image", {
+          {...register("new_image", {
             required: {
               value: true,
               message: "You have to input text to generate image",
@@ -49,7 +43,7 @@ const NewImageLayout = () => {
           placeholder="Enter new text"
         />
         <div className="text-red-600 text-xl h-8 mt-4">
-          <ErrorMessage errors={errors} name="new-image" />
+          <ErrorMessage errors={errors} name="new_image" />
         </div>
         <button className="bg-green-600 hover:bg-green-900 transition-all text-white text-xl w-full py-2 text-center max-w-[15rem] rounded mt-10">
           Generate

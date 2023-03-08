@@ -1,3 +1,4 @@
+import { LayoutTypes } from "./types";
 import { useForm } from "react-hook-form";
 import { randomText } from "utils";
 
@@ -7,18 +8,16 @@ const useNewImageLayout = () => {
     register,
     formState: { errors },
     setValue,
-  } = useForm({ mode: "onChange" });
+  } = useForm<LayoutTypes>({ mode: "onChange" });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: LayoutTypes) => {
     console.log(data);
   };
 
   const randomGenerated = () => {
     const random = randomText[Math.floor(Math.random() * randomText.length)];
-    setValue("new-image", random);
+    setValue("new_image", random);
   };
-
-  const generateImage = () => {};
 
   return {
     handleSubmit,
@@ -26,7 +25,6 @@ const useNewImageLayout = () => {
     onSubmit,
     errors,
     randomGenerated,
-    generateImage,
   };
 };
 
