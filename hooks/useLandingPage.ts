@@ -10,6 +10,8 @@ const useLandingPage = () => {
 
   const makeSuccessMessage = (text: string) => {
     setMessage({ text, isShowing: true });
+
+    setTimeout(() => setMessage({ text: "", isShowing: false }), 5000);
   };
 
   return { whichForm, setWhichForm, message, setMessage, makeSuccessMessage };
